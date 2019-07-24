@@ -1,12 +1,12 @@
 package jp.tomorrowkey.android.navigationgraphsample
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import jp.tomorrowkey.android.navigationgraphsample.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(), HomeFragmentEventHandler {
@@ -21,7 +21,7 @@ class HomeFragment : Fragment(), HomeFragmentEventHandler {
     }
 
     override fun onClickNextButton(view: View) {
-        Log.d("HomeFragment", "Hola!")
+        view.findNavController().navigate(R.id.action_homeFragment_to_nextFragment)
     }
 }
 
