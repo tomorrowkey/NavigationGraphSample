@@ -4,6 +4,20 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
             app:startDestination="@id/homeFragment">
 
-    <fragment android:id="@+id/homeFragment" android:name="jp.tomorrowkey.android.navigationgraphsample.HomeFragment"
-              android:label="fragment_home" tools:layout="@layout/fragment_home"/>
+    <fragment
+            android:id="@+id/homeFragment"
+            android:name="jp.tomorrowkey.android.navigationgraphsample.HomeFragment"
+            android:label="fragment_home"
+            tools:layout="@layout/fragment_home"
+    >
+        <action
+                android:id="@+id/action_homeFragment_to_nextFragment"
+                app:destination="@id/nextFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/nextFragment"
+            android:name="jp.tomorrowkey.android.navigationgraphsample.NextFragment"
+            android:label="fragment_next"
+            tools:layout="@layout/fragment_next"
+    />
 </navigation>
