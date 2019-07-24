@@ -19,5 +19,9 @@
             android:name="jp.tomorrowkey.android.navigationgraphsample.NextFragment"
             android:label="fragment_next"
             tools:layout="@layout/fragment_next"
-    />
+    >
+        <action android:id="@+id/action_nextFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:popUpTo="@+id/homeFragment" app:popUpToInclusive="true"/>
+    </fragment>
 </navigation>
