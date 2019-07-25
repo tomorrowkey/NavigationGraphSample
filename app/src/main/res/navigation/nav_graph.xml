@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
-            app:startDestination="@id/homeFragment">
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/homeFragment"
+        >
 
     <fragment
             android:id="@+id/homeFragment"
             android:name="jp.tomorrowkey.android.navigationgraphsample.HomeFragment"
             android:label="fragment_home"
             tools:layout="@layout/fragment_home"
-    >
+            >
         <action
                 android:id="@+id/action_homeFragment_to_nextFragment"
-                app:destination="@id/nextFragment"/>
-        <action android:id="@+id/action_homeFragment_to_nestedNavGraph" app:destination="@id/nested_nav_graph.xml"/>
+                app:destination="@id/nextFragment"
+                />
+        <action
+                android:id="@+id/action_homeFragment_to_nestedNavGraph"
+                app:destination="@id/nested_nav_graph.xml"
+                />
     </fragment>
     <fragment
             android:id="@+id/nextFragment"
             android:name="jp.tomorrowkey.android.navigationgraphsample.NextFragment"
             android:label="fragment_next"
             tools:layout="@layout/fragment_next"
-    >
-        <action android:id="@+id/action_nextFragment_to_homeFragment"
+            >
+        <action
+                android:id="@+id/action_nextFragment_to_homeFragment"
                 app:destination="@id/homeFragment"
-                app:popUpTo="@+id/homeFragment" app:popUpToInclusive="true"/>
-        <action android:id="@+id/action_nextFragment_to_nestedNavGraph" app:destination="@id/nested_nav_graph.xml"/>
+                app:popUpTo="@+id/homeFragment"
+                app:popUpToInclusive="true"
+                />
+        <action
+                android:id="@+id/action_nextFragment_to_nestedNavGraph"
+                app:destination="@id/nested_nav_graph.xml"
+                />
     </fragment>
-    <include app:graph="@navigation/nested_nav_graph"/>
+    <include app:graph="@navigation/nested_nav_graph" />
 </navigation>
