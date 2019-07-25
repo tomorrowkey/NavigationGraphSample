@@ -23,8 +23,13 @@ class NextFragment : Fragment(), NextFragmentHandler {
     override fun onClickPopButton(view: View) {
         view.findNavController().navigate(R.id.action_nextFragment_to_homeFragment)
     }
+
+    override fun onClickNestedFragmentButton(view: View) {
+        view.findNavController().navigate(R.id.action_nextFragment_to_nestedNavGraph)
+    }
 }
 
 interface NextFragmentHandler {
     fun onClickPopButton(view: View)
+    fun onClickNestedFragmentButton(view: View)
 }

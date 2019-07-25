@@ -1,7 +1,7 @@
 Navigation Graph Sample
 ===
 
-Sample implemention of [Get started with the Navigation component  |  Android Developers](https://developer.android.com/guide/navigation/navigation-getting-started)
+Sample implemention of [Get started with the Navigation component  |  Android Developers](https://developer.android.com/guide/navigation/navigation-getting-started) and [Nested navigation graphs  |  Android Developers](https://developer.android.com/guide/navigation/navigation-nested-graphs)
 
 # License
 

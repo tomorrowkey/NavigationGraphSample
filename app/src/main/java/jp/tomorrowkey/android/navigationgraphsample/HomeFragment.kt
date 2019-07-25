@@ -10,7 +10,6 @@ import androidx.navigation.findNavController
 import jp.tomorrowkey.android.navigationgraphsample.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(), HomeFragmentEventHandler {
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,8 +22,13 @@ class HomeFragment : Fragment(), HomeFragmentEventHandler {
     override fun onClickNextButton(view: View) {
         view.findNavController().navigate(R.id.action_homeFragment_to_nextFragment)
     }
+
+    override fun onClickNestedFragmentButton(view: View) {
+        view.findNavController().navigate(R.id.action_homeFragment_to_nestedNavGraph)
+    }
 }
 
 interface HomeFragmentEventHandler {
     fun onClickNextButton(view: View)
+    fun onClickNestedFragmentButton(view: View)
 }
