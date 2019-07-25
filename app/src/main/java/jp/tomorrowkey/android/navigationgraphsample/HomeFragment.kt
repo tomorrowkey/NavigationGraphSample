@@ -20,7 +20,8 @@ class HomeFragment : Fragment(), HomeFragmentEventHandler {
     }
 
     override fun onClickNextButton(view: View) {
-        view.findNavController().navigate(R.id.action_homeFragment_to_nextFragment)
+        val action = HomeFragmentDirections.actionHomeFragmentToNextFragment("hoge")
+        view.findNavController().navigate(action)
     }
 
     override fun onClickNestedFragmentButton(view: View) {
